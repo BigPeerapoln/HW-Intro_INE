@@ -1,0 +1,22 @@
+img{
+    width: 100%;
+    height: auto;
+    border: 1px;
+    border-radius: 5px;
+}
+h1{
+    color: red;
+}
+table {
+    width: 80%;
+    height: 250px;
+    background-color: yellow;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 2px solid rgb(255, 0, 0);
+  
+}
+tr:hover {background-color: rgb(255, 166, 0);}
