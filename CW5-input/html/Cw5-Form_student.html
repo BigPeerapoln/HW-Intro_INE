@@ -1,18 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="dev-flex">
+    <div class="container">
         <div class="user_input">
-            <h1>ส่วนที่ 1: ข้อมูลส่วนตัวของผู้สมัคร</h1>
-            
+            <h1>📌 ส่วนที่ 1: ข้อมูลส่วนตัวของผู้สมัคร</h1>
+            <label>คำนำหน้า:</label>
+            <select>
+                <option value="นาย">นาย</option>
+                <option value="นางสาว">นางสาว</option>
+                <option value="นาง">นาง</option>
+            </select>
+
+            <div class="user_input">
+                <label>ชื่อ:</label><input type="text"> <br>
+                <label>นามสกุล:</label><input type="text"> <br>
+                <label>เลขประจำตัวประชาชน (13 หลัก):</label><input type="text" maxlength="13"> <br>
+                <label>วันเดือนปีเกิด:</label><input type="date"> <br>
+                <label>อายุ (ปี):</label><input type="number"> <br>
+
+                <label>เพศ:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">ชาย</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">หญิง</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">ไม่ระบุ</label><br>
+
+
+                <label>สัญชาติ:</label><input type="text"> <br>
+                <label>เชื้อชาติ:</label><input type="text"> <br>
+                <label>ศาสนา:</label><input type="text"> <br>
+                <label>เบอร์โทรศัพท์:</label><input type="tel"> <br>
+                <label>อีเมล:</label><input type="email"> <br>
+                <label>ที่อยู่:</label><textarea name="" id=""></textarea> <br>
+            </div>
+        </div>
+        <div class="edit-study">
+            <h1>📌 ส่วนที่ 2: ข้อมูลการสมัครเรียน</h1>
+            <label>วุฒิที่จบมา:</label>
+            <select>
+                <option value="qualification">ม.6</option>
+                <option value="qualification">ปวช.</option>
+                <option value="qualification">ปวส.</option>
+            </select> <br>
+            <label>ชื่อสถานศึกษาที่จบ:</label> <input type="text"><br>
+            <label>ปีที่จบ:</label> <input type="number"><br>
+            <label>GPA:</label> <input type="number" c step="0.01"><br>
+
+            <label>สาขาที่สมัคร:</label>
+            <select>
+                <option value="branch">IT</option>
+                <option value="branch">ITII</option>
+                <option value="branch">INE</option>
+                <option value="branch">INET</option>
+            </select> <br>
+            <label>เหตุผลที่เลือกสาขา:</label><textarea name="" id=""></textarea> <br>
         </div>
 
+        <div class="educational-record">
+            <h1>📌 ส่วนที่ 3: ประวัติการศึกษา</h1>
+            <label for="">ให้นักเรียนกรอกข้อมูลการศึกษา 3 ระดับ ได้แก่:</label><br>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ระดับการศึกษา</th>
+                        <th>สถานศึกษา</th>
+                        <th>จังหวัด</th>
+                        <th>ปีที่เข้า</th>
+                        <th>ปีที่จบ</th>
+                        <th>วุฒิที่ได้รับ</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ประถมศึกษา</td>
+                        <td><input type="text" name="primary_school"></td>
+                        <td><input type="text" name="primary_province"></td>
+                        <td><input type="number" name="primary_start_year"></td>
+                        <td><input type="number" name="primary_end_year"></td>
+                        <td><input type="text" name="primary_certificate"></td>
+                        <td><input type="number" step="0.01" name="primary_gpa"></td>
+                    </tr>
+                    <tr>
+                        <td>มัธยมต้น</td>
+                        <td><input type="text" name="primary_school"></td>
+                        <td><input type="text" name="primary_province"></td>
+                        <td><input type="number" name="primary_start_year"></td>
+                        <td><input type="number" name="primary_end_year"></td>
+                        <td><input type="text" name="primary_certificate"></td>
+                        <td><input type="number" step="0.01" name="primary_gpa"></td>
+                    </tr>
+                    <tr>
+                        <td>มัธยมปลาย/ปวช./ปวส.</td>
+                        <td><input type="text" name="primary_school"></td>
+                        <td><input type="text" name="primary_province"></td>
+                        <td><input type="number" name="primary_start_year"></td>
+                        <td><input type="number" name="primary_end_year"></td>
+                        <td colspan="2"></td>
 
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="file-upload">
+            <h1>📌 ส่วนที่ 4: เอกสารแนบ</h1>
+            <label for="">แนบไฟล์สำเนาบัตรประชาชน </label><input type="file"> <br>
+            <label for="">แนบไฟล์วุฒิการศึกษา (เช่น ปพ.1)</label><input type="file"> <br>
+            <label for="documents">แนบไฟล์เพิ่มเติม:</label>
+            <input type="file" id="documents" name="documents[]" multiple>
+        </div>
+            <input type="checkbox"> ยอมรับเงื่อนไข <br>
+            <button type="submit">ยืนยัน</button>
+            <button type="reset">ยกเลิก</button>
     </div>
 </body>
+
 </html>
